@@ -6,3 +6,5 @@ vue特点
   3 使用虚拟 DOM + 优秀的Diff算法，尽量复用DOM节点
 */
 </script>
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        Vue模板语法有两大类：
+            1.插值语法：
+                功能：用于解析标签体内容
+                写法：{{xxx}},xxx是js表达式，且可以直接读取到data中的所有属性
+            2.指令语法：
+                功能：用于解析标签
+                备注：Vue中有很多的指令，且形式都是：v-？？？
+     -->
+
+
+    <div id="root">
+        <a :href="url">单击去百度</a>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip=false //阻止 vue 在启动时生成生产提示
+    
+    //创建vue实例
+    const x = new Vue({
+        el:'#root', //el用于指定当前vue实例为哪个容器服务，值通常为css选择器字符串
+        data:{ //data用于存储数据，数据供el所指定的容器去使用
+            name:'1111',
+            url:'https://www.baidu.com/'
+        }
+    })
+     
+</script>
+</html>
