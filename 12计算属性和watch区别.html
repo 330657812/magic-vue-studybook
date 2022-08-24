@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <div id="root">
+        <input type="text" placeholder="按下回车提示输入" @keyup="showInfo">
+    </div> -->
+    <!-- 
+
+        watch:
+            没有缓存，数据变化就变化，可以进行异步操作
+        computed：
+            有缓存，数据变化就变化 
+
+     -->
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip=false
+
+    const vm = new Vue({
+        el:'#root',
+        data:{ 
+            name:'222',
+            url:'https://www.baidu.com/'
+        },
+        methods:{
+            showInfo(){
+                console.log(11)
+            }
+        }
+    })
+</script>
+</html>
