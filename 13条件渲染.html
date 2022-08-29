@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        v-if 适用于切换频率低的场景，会移除或者新增节点，会获取不了节点
+        v-show 适用于切换频率高的场景，使用display:none隐藏节点，可以获取节点
+     -->
+
+
+    <div id="root">
+        <h2 v-show="a">{{ name }}</h2>
+        <h2 v-if="!a">{{ 1 + name }}</h2>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip=false
+
+    const vm = new Vue({
+        el:'#root',
+        data:{ 
+            name:'222',
+            url:'https://www.baidu.com/',
+            a:false
+        },
+        methods:{
+            showInfo(){
+                console.log(11)
+            }
+        }
+    })
+</script>
+</html>
